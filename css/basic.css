@@ -1,0 +1,816 @@
+/***
+
+COLOR PALETTE
+	- Basic background colour: #fff (white) or trnasparent;
+	- Main text colour (most of paragraphs): #333;
+	- Colours for titles, some specific backgrounds, buttons, etc (contrast purpose):
+		color:#49497a;
+		color: #5f5f9f;
+
+FONTS
+	- Main fonts: 'Titillium Web', sans-serif
+	- Secondary font: 'Exo'
+
+CSS STRUCTURE
+	This file is divided into three main parts based on @media rules:
+		- @media only screen
+		- @media only screen and (min-width: 500px)
+		- @media (max-width: 700px) and (orientation: landscape)
+***/
+
+
+@media only screen {
+
+	/*................... INDEX ...................*/
+	body {
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: 300;
+		font-size: 16px;
+		background-attachment: fixed;
+		background-size: cover; 	
+	}
+
+	b {
+		font-weight: 600;
+	}
+			
+	.secondaryFont {
+		font-family: 'Exo', sans-serif;
+	}
+
+	#logo {
+		position: absolute;
+		top: 30px;
+		left: 20px;
+		z-index: 100;
+		font-size: 120%;
+		letter-spacing: -1px;
+	}
+
+	#logo > a
+	#logo > a:focus, 
+	#logo > a:visited, 
+	#logo > a:active {
+		color: #1c1c59;
+		z-index: 100;
+	}
+
+	#logo > a:hover {
+		color: #6868d0;
+	}
+
+	#buttonNavbar {
+		position: fixed;
+		top: 30px;
+		right: 20px;
+		border-radius: 0;
+		background_color: transparent;
+		z-index: 110;		
+	}
+
+	a,
+	a:hover,
+	a:focus,
+	a:active,
+	a:visited {
+		text-decoration:none;
+	}
+
+	ul{  
+		list-style-type:none;  
+	}  
+
+	.glyphicon-menu-hamburger {
+		color: #1c1c59;	
+	} 
+
+	.glyphicon-menu-hamburger:hover {
+		color: #6868d0;	
+	} 
+
+	.glyphicon-menu-right {
+		color: #c8c8ee;
+		font-size: 150%;
+	}
+
+	.glyphicon-menu-right:hover {
+		color: #fff;
+		font-weight: bolder;
+	}  
+
+	button {
+	    background-color: Transparent;
+	    background-repeat:no-repeat;
+	    border: none;
+	    cursor:pointer;
+	    overflow: hidden;
+	    outline:none;
+	}
+
+	#sideNavbar {
+		display: none;
+		background-color: rgba(23, 23, 74, 1);
+		height:100%;
+		width:100%;
+		position:fixed;
+		right: 0%;
+		top:0%;
+		z-index: 120;
+	}
+
+	#sideNavbar > ul {
+		padding: 30px;
+		color: #fff;
+	}
+
+	#sideNavbar > ul > li > a {
+		font-size: 150%;
+		color: #c8c8ee;
+		line-height: 180%;
+		font-weight: 200;
+	}
+
+	#sideNavbar > ul > li > a:hover {
+		color: #fff;
+		font-weight: 600;
+	}
+
+	#sideNavbar > ul > li > a.active {
+		font-weight: 600;
+		color: #d3d3d3;
+	}
+
+	footer {
+		padding:4%;
+		font-size: 90%;
+		z-index: 50; 
+	}
+
+	#iconSocial {
+		text-align: right;
+	}
+
+	footer a {
+		padding-top: 5%;
+		color: #4d4d4d;
+		line-height: 180%;
+	}
+
+	footer a:hover {
+		padding-top: 2%;
+		color: #4d4d4d;
+		font-weight: bolder;
+	}
+
+	/* ................. End INDEX ................ */
+
+	/* ................ HOME ..............*/
+	#home-video {
+		position: fixed;
+		right: 0; 
+		bottom: 0;
+		min-width: 100%; 
+		min-height: 100%;
+		width: auto; 
+		height: 800;
+		z-index: 200;
+	}
+	
+	#home-panel {
+		padding-top: 100px;	
+		position: absolute;
+		color: #fff;
+		z-index: 250;
+	}
+
+	#home-panel h1 {
+		padding-bottom: 2%;
+		text-transform: uppercase;
+	}
+
+	#home-panel h1 sup {
+		font-family: "Exo";
+		font-weight: 400;
+	}
+
+	#home-panel h3 {
+		padding-top:1%;
+		padding-bottom:7%;
+		letter-spacing: -1px;
+	}
+
+	#home-summit-date {
+		letter-spacing: -1px;
+	}
+
+	/* ................ End HOME ..............*/
+
+	/* ................ INTRO ..............*/
+
+	/*................... Parallax effect ...................*/
+
+	* {
+	    margin: 0;
+	    padding: 0;
+	}
+
+	#wrapper {
+	    box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+	    margin: 0 auto;
+	    max-width: 1440px;
+	    width: 100% !important;
+	}
+	 	
+	.parallax-standard-block {
+	 	background-attachment: fixed;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 770px;
+	    margin: 0 auto;
+	    max-width: 1440px;
+	    overflow: hidden;
+	    padding: 0;
+	    position: relative;
+	    width: 100% !important;
+	}
+
+	#intro-section-1 {
+		background-image: url("images/blur_drops.jpg");
+		padding-top: 140px;
+	}
+
+	#intro-section-2 {
+		background-image: url("images/conference.jpg");
+		padding-top: 140px;
+		color: #fff;
+	}
+
+	#intro-section-3 {
+		background-image: url("images/writing.jpg");
+	}
+
+	#intro-section-4 {
+		background-image: url("images/skyscraper.jpg");
+	}
+
+
+	/*................... End Parallax effect ...................*/
+
+	/* .................. Animation ...................... */
+
+	.sa {visibility:hidden;}
+	.slide {
+	   
+	    animation-name: slide;
+	    -webkit-animation-name: slide; 
+	    
+	    animation-duration: 1s; 
+	    -webkit-animation-duration: 1s;
+	    
+	    visibility: visible; 
+	}
+
+	.animation1 {visibility:hidden;}
+	.slide {
+
+	    animation-name: slide;
+	    -webkit-animation-name: slide; 
+	
+	    animation-duration: 1s; 
+	    -webkit-animation-duration: 1s;
+
+	    visibility: visible; 
+	}
+
+	@keyframes slide {
+	    0% {
+	        opacity: 0;
+	        -webkit-transform: translateY(70%);
+	    } 
+	    100% {
+	        opacity: 1;
+	        -webkit-transform: translateY(0%);
+	    } 
+	}
+
+	@-webkit-keyframes slide {
+	    0% {
+	        opacity: 0;
+	        -webkit-transform: translateY(70%);
+	    } 
+	    100% {
+	        opacity: 1;
+	        -webkit-transform: translateY(0%);
+	    }
+	}
+
+	/* ................. End Animation .......................*/
+
+	.secondSlogan {
+		font-size: 500%;
+		font-weight: 500;
+		letter-spacing: -6px;
+		line-height: 110%;
+		text-align: center;
+		text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.65);
+		animation: fadein 4s;
+	    -moz-animation: fadein 4s; /* Firefox */
+	    -webkit-animation: fadein 4s; /* Safari and Chrome */
+	    -o-animation: fadein 4s; /* Opera */
+	}
+
+	@keyframes fadein {
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity:1;
+	    }
+	}
+
+	@-moz-keyframes fadein { /* Firefox */
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity:1;
+	    }
+	}
+
+	@-webkit-keyframes fadein { /* Safari and Chrome */
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity:1;
+	    }
+	}
+
+	@-o-keyframes fadein { /* Opera */
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity: 1;
+	    }
+	}
+
+	.auditorium-text-background {
+		background-color: rgba(0,0,0,0.8);
+		padding: 3%;
+	}
+
+	.emerald-isle-text {
+		letter-spacing:-2px; 
+		font-size: 300%; 
+		line-height: 110%;
+		font-weight: 200; 
+	}
+
+	.explanation {
+		padding-top: 10%; 	
+	}
+
+	.explanation-2 {
+		padding-top: 4%;
+	}
+
+	.opinion {
+		padding-top: 4%;
+		padding-bottom: 14%; 
+		padding-left: 10%;	
+	}
+
+	.opinion h2 {
+		text-shadow: 1px 0px 2px rgba(150, 150, 150, 0.65);
+	}
+
+	.opinion h5 {
+		color: #bfbfbf;
+	}
+
+	.opinion-2 {
+		padding-top: 10%; 
+		padding-right: 5%;
+	}
+
+	.opinion-2 h2 {
+		text-shadow: 1px 0px 2px rgba(150, 150, 150, 0.65);
+	}
+
+	.opinion-2 h5 {
+		color: #bfbfbf;
+	}
+
+	.interested-attending {
+		padding-right: 3%;
+		padding-bottom: 3%;
+	}
+
+	.interested-attending h2 {
+		text-shadow: 1px 0px 2px rgba(150, 150, 150, 0.65);
+	}
+
+	.intro-section-standard {
+		background-repeat:no-repeat;
+		background-size:cover;
+		height: 700px;
+		width: 100%;
+	}
+
+	.intro-steps-1 {
+		background-image: url("images/whiteboard.jpg");
+	}
+
+	.intro-steps-2 {
+		background-image: url("images/books.jpg");
+	}
+
+	.intro-steps-3 {
+		background-image: url("images/folk.jpg");
+	}
+
+	.intro-steps-4 {
+		background-image: url("images/laptop_tablet.jpg");
+	}
+
+	.summit-caption {
+		line-height: 105%;
+		font-size: 160%;
+		letter-spacing: -0.5px;
+		font-weight: 200;
+		padding: 4%;
+		color: #fff;
+		background-color: rgba(73, 73, 122, 0.8); 
+		margin-top: 6%;	
+		border-left: 0px solid;
+		text-align: center;
+	}
+
+	#summit-step-1 {
+		background-color: rgba(255,255,255, 0.9);
+		padding: 4% 3%;
+		font-family: "Exo";	
+	}
+
+	#summit-step-2 {
+		background-color: rgba(255,255,255, 0.9);
+		padding: 4% 3%;
+		font-family: "Exo";
+	}
+
+	#summit-step-3 {
+		background-color: rgba(255,255,255, 0.9);
+		padding: 4% 3%;
+		font-family: "Exo";
+	}
+
+	#summit-step-4 {
+		background-color: rgba(255,255,255, 0.9);
+		padding: 4% 3%;
+		font-family: "Exo";
+	}
+
+	.button-squared-2 {
+		padding: 3% 10%; 
+		font-size: 120%; 
+		border: 3px solid #fff; 
+		color: #fff; 
+		font-weight: 600;
+		letter-spacing: -0.8px;	 
+	}
+
+	.button-squared-2:hover {
+		border-color:  #fff;
+		background:  #fff;
+		color: #4d4d4d;
+	}
+
+	.button-squared-3 {
+		padding: 3% 10% 8% 10%; 
+		border: 2px solid rgba(58, 58, 97, 1); 
+		color: rgba(58, 58, 97, 1); 
+		margin: 4% 1%;
+		text-align: left;
+	}
+
+	.button-squared-3:hover {
+		border-color:  rgba(58, 58, 97, 1);
+		background:  rgba(58, 58, 97, 1);
+		color: #fff;
+	}
+
+	h1 {
+		font-size: 500%;
+		letter-spacing: -7px;
+		font-weight: 600;
+	}
+
+	h2 { 
+		letter-spacing:-3px; 
+		font-size: 300%; 
+		line-height: 100%; 	
+	}
+
+	h3 { 
+		letter-spacing:-0.7px; 
+		font-size: 150%; 
+		line-height: 110%; 	
+	}
+
+	h4 {
+		letter-spacing:-0.7px; 
+		font-size: 140%; 
+		line-height: 110%;
+	}
+
+	h5 {
+		letter-spacing:-0.2px; 
+		font-size: 120%; 
+		line-height: 130%;
+		font-weight: 400;
+		color: #3c3c3c;
+	}
+
+	.firstColour {
+		color:#49497a; 
+	}
+
+	.secondColour {
+		color: #5f5f9f;
+	}
+
+	mark {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
+	.mark1 {
+		background-color: #49497a; 
+		color: white; 
+		letter-spacing:0px; 
+		font-size: 120%;
+		font-weight: 200;
+	}
+
+	.bar-icon {
+		width: 60%;
+		padding: 1px;
+	    background-color: #d8d8f3; 
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    margin: 10% auto 10% 0%;
+	}
+
+	.explanatory-step-box {
+		line-height: 105%;
+		font-size: 210%;
+		letter-spacing: -2.5px;
+		font-weight: 400;
+		font-family: "Titillium Web";
+		color: #3c3c3c;
+		text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.65);
+		
+	}
+
+	/* ................ End INTRO ..............*/
+
+	/* ................ PROGRAMME ..............*/
+
+	.main-view {
+		padding-top: 30%;
+	}
+
+	.content-box {
+		padding-top: 4%;
+	}
+
+	.content-box-2 {
+		padding-top: 4%;
+		padding-bottom: 6%;
+	}
+
+	.content-box-3 {
+		padding-top: 4%;
+		padding-bottom: 4%;
+	}
+
+	#agenda {
+		padding-bottom: 4%;
+	}
+
+	#agendaTitle {
+		margin-bottom: 7%;
+	}
+
+	.textStyle-1 {
+		color: #000;
+	}
+
+	.textStyle-2 {
+		font-weight: 600;
+	}
+
+	.textStyle-3 {
+		font-weight: 600;
+		color: #939393;
+	}
+
+	.textStyle-4 {
+		color: #3c3c3c;
+	}
+
+	#showOrderOptions {
+		cursor: pointer;
+		padding-bottom: 1%;
+	}
+
+	#orderOptions {
+		display: none;
+		padding-top: 2%;
+		padding-left: 2%;
+		color:#49497a;
+	}
+
+	/* ................ End PROGRAMME ..............*/
+
+	/* ................ VENUE ..............*/
+
+	#venue-video {
+		margin: 8% 4%;
+	}
+
+	#map {
+	    height: 400px;
+	    width: 100%;
+	    display: block;
+	}
+
+	#twoTypes {
+		padding-top: 3%;
+	}
+
+	#showTalkRoom {
+		cursor: pointer;
+		padding-bottom: 1%;
+	}
+
+	#talkRoom {
+		display: none;
+		padding-top: 0%;
+		padding-left: 4%;
+		padding-bottom: 3%;
+	}
+
+	#showWorkshopRoom {
+		cursor: pointer;
+		padding-bottom: 1%;
+	}
+
+	#workshopRoom {
+		display: none;
+		padding-top: 0%;
+		padding-left: 4%;
+		padding-bottom: 3%;
+	}
+
+	/* ................ End VENUE ..............*/
+
+	/* ................ SPEAKERS ..............*/
+
+	.speaker {
+		margin-bottom: 12%;
+		padding-right: 4%;
+	}
+
+	.filterG {
+		-webkit-filter: grayscale(100%);
+    	filter: grayscale(100%);
+	}
+
+	/* ................ End SPEAKERS ..............*/
+
+	/* ................ PARTNERS ..............*/
+
+	.paddingLogo {
+		padding-bottom: 6%;
+	}
+
+	.logoAlign {
+		text-align: center;
+	}
+
+	/* ................ End PARTNERS ..............*/
+
+	/* ................ CONTACT ..............*/
+
+
+	form div[class="row"] {
+		padding-top: 2%;
+	}
+
+	.answerForm {
+		color: #49497a;
+		padding-top: 1%;
+	}
+
+	.error {
+		color: orangered;
+	}
+
+	/* ................ End CONTACT ..............*/
+
+	/* ................ TERMS AND PRIVACY ..............*/
+
+	.list-of-terms {
+		list-style-type:square;
+		margin: 6%;
+	}
+
+	/* ................ End TERMS AND PRIVACY  ..............*/
+
+}
+
+@media only screen and (min-width: 500px) {
+
+	#logo {
+		top: 30px;
+		left: 40px;
+	}
+
+	#buttonNavbar {
+		top: 30px;
+		right: 40px;	
+	} 
+
+	#sideNavbar {
+		width:40%;
+		background-color: rgba(23, 23, 74, 0.95);
+	}
+
+	#home-panel {
+		padding-top: 160px;
+	}
+
+	#intro-section-1 {
+		padding-top: 280px;
+	}
+
+	.explanation {
+		padding-top: 10%; 	
+	}
+
+	.explanation-2 {
+		padding-top: 10%;
+	}
+
+	.opinion {
+		padding-top: 10%; 
+		padding-bottom: 14%; 
+		padding-left: 10%;
+	}
+
+	.opinion h5 {
+		color: #bfbfbf;
+	}
+
+	.opinion-2 {
+		padding-top: 10%; 
+		padding-bottom: 14%; 
+		padding-right: 5%;
+	}
+
+	.opinion-2 h5 {
+		color: #bfbfbf;
+	}
+
+	.summit-caption {
+		padding: 1%;
+	}
+
+	.explanation-with-icon {
+		padding-top: 10%; 
+		padding-bottom: 10%;
+	}
+
+	.section-attending {
+		padding-bottom: 5%;
+	}
+
+	.main-view {
+		padding-top: 15%;
+	}
+
+}
+
+
+@media (max-width: 700px) and (orientation: landscape) { 
+
+	#sideNavbar {
+		
+		overflow-y:scroll;
+    	overflow-x:hidden;
+	}
+
+ }
